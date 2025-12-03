@@ -1,5 +1,5 @@
 import os 
-path = os.getcwd() + "\\Day3\\testSource.txt"
+path = os.getcwd() + "\\Day3\\source.txt"
 f = open(path, "r")
 
 def getBiggestNumAndXInRange(startXIndex, bankString, endXIndex):
