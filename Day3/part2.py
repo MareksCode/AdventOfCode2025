@@ -5,7 +5,7 @@ f = open(path, "r")
 def getBiggestNumAndXInRange(startXIndex, bankString, endXIndex):
     biggestNum = -1
     biggestX = -1
-    for x in range(startXIndex, endXIndex):
+    for x in range(startXIndex, endXIndex + 1):
         numAtX = int(bankString[x])
         if numAtX > biggestNum:
             biggestNum = numAtX
@@ -14,6 +14,8 @@ def getBiggestNumAndXInRange(startXIndex, bankString, endXIndex):
 
 endResult = 0
 for bankString in f:
+    bankString = bankString.strip()
+    
     print("Bank string:"+bankString)
     lastXIndex = 0
     totalNumber = 0
